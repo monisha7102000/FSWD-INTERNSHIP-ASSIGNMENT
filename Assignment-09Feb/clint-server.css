@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #dfe9f3, #ffffff);
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.diagram {
+    position: relative;
+    margin-top: 40px;
+    height: 150px;
+}
+
+.box {
+    width: 150px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    margin: 20px;
+}
+
+.client {
+    background-color: #3498db;
+}
+
+.server {
+    background-color: #e74c3c;
+}
+
+.request {
+    position: absolute;
+    top: 30px;
+    left: 35%;
+    color: green;
+    font-weight: bold;
+    animation: moveRight 3s infinite;
+}
+
+.response {
+    position: absolute;
+    bottom: 30px;
+    right: 35%;
+    color: purple;
+    font-weight: bold;
+    animation: moveLeft 3s infinite;
+}
+
+@keyframes moveRight {
+    0% { left: 35%; opacity: 1; }
+    50% { left: 55%; opacity: 1; }
+    100% { left: 35%; opacity: 0; }
+}
+
+@keyframes moveLeft {
+    0% { right: 35%; opacity: 1; }
+    50% { right: 55%; opacity: 1; }
+    100% { right: 35%; opacity: 0; }
+}

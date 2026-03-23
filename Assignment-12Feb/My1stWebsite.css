@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+h1 {
+    color: darkblue;
+}
+
+h2 {
+    color: green;
+}
+
+p {
+    font-size: 18px;
+}
+
+img {
+    border-radius: 50%;
+    margin: 10px;
+}
+
+ul, ol {
+    display: inline-block;
+    text-align: left;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

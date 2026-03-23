@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Manager</title>
+</head>
+<body>
+
+<h2>Student Manager</h2>
+<p>Open the console (Press F12) to see the student details and averages.</p>
+
+<script>
+
+let students = [
+    {
+        name: "Monisha",
+        marks: [85, 90, 88]
+    },
+    {
+        name: "Rahul",
+        marks: [70, 75, 80]
+    },
+    {
+        name: "Anita",
+        marks: [92, 89, 95]
+    }
+];
+
+students.forEach(function(student) {
+
+    let total = 0;
+
+    student.marks.forEach(function(mark) {
+        total += mark;
+    });
+
+    let average = total / student.marks.length;
+
+    console.log("Student Name: " + student.name);
+    console.log("Marks: " + student.marks.join(", "));
+    console.log("Average: " + average);
+    console.log("---------------------");
+
+});
+
+</script>
+
+</body>
+</html>
