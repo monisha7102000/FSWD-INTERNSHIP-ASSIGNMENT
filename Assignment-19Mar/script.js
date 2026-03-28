@@ -14,7 +14,6 @@ function createFolder(folderName) {
         console.log("Folder already exists");
     }
 }
-
 // Save file
 function saveFile(folderName, fileName, content) {
     const filePath = path.join(baseDir, folderName, fileName);

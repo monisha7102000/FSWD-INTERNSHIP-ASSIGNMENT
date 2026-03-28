@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Listing</title>
+    <style>
+        body { font-family: Arial; }
+        .container { display: flex; flex-wrap: wrap; gap: 20px; }
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+        }
+        button { margin: 5px; }
+    </style>
+</head>
+<body>
+
+<h2>Product Listing</h2>
+
+<button onclick="filterProducts('all')">All</button>
+<button onclick="filterProducts('electronics')">Electronics</button>
+<button onclick="filterProducts('clothing')">Clothing</button>
+
+<div class="container" id="productContainer"></div>
+
+<script>
+const products = [
+    { name: "Phone", category: "electronics", price: 10000 },
+    { name: "Laptop", category: "electronics", price: 50000 },
+    { name: "Shirt", category: "clothing", price: 500 },
+    { name: "Jeans", category: "clothing", price: 1000 }
+];
+
+function displayProducts(list) {
+    const container = document.getElementById('productContainer');
+    container.innerHTML = "";
+    
+    list.forEach(product => {
+        const card = `
+            <div class="card">
+                <h3>${product.name}</h3>
+                <p>Category: ${product.category}</p>
+                <p>₹${product.price}</p>
+            </div>
+        `;
+        container.innerHTML += card;
+    });
+}
+
+function filterProducts(category) {
+    if (category === 'all') {
+        displayProducts(products);
+    } else {
+        const filtered = products.filter(p => p.category === category);
+        displayProducts(filtered);
+    }
+}
+
+// Load all products initially
+displayProducts(products);
+</script>
+
+</body>
+</html>
